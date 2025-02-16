@@ -1,1 +1,211 @@
-# WEB
+<!DOCTYPE html>
+<html lang="hy"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASALA - Հայաստանի Ազատագրութեան Հայ Գաղտնի Բանակ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #d90000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #003366;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .section {
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #d90000;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 30%;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #d90000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #b30000;
+        }
+
+        footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ASALA</h1>
+            <p>Հայաստանի Ազատագրութեան Հայ Գաղտնի Բանակ</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">Մեր Պատմությունը</a></li>
+            <li><a href="#goals">Նպատակներ</a></li>
+            <li><a href="#events">Իրադարձություններ</a></li>
+            <li><a href="#gallery">Պատկերասրահ</a></li>
+            <li><a href="#contact">Կապ</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Մեր Պատմությունը</h2>
+            <p>ASALA-ն (Armenian Secret Army for the Liberation of 
+Armenia) հայ ազգային-ազատագրական կազմակերպություն էր, որը հիմնադրվել է 
+1975 թվականին Լիբանանում։ Նրա նպատակն էր պայքարել Հայոց ցեղասպանության 
+ճանաչման և արդարության հասնելու համար։</p>
+        </div>
+    </section>
+
+    <section id="goals" class="section">
+        <div class="container">
+            <h2>Նպատակներ</h2>
+            <ul>
+                <li>Հայոց ցեղասպանության միջազգային ճանաչում։</li>
+                <li>Հայաստանի անկախության և ազատագրության հասնելը։</li>
+                <li>Հայ ժողովրդի իրավունքների պաշտպանություն։</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <div class="container">
+            <h2>Իրադարձություններ</h2>
+            <p>ASALA-ն իր գործունեությունը ծավալել է հիմնականում 
+1970-1980-ական թվականներին՝ իրականացնելով մի շարք ռազմատենչ 
+գործողություններ թուրք դիվանագետների և հաստատությունների դեմ։</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Պատկերասրահ</h2>
+            <div class="gallery">
+                <img src="ASALA%20-%20%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%D5%AB%20%D4%B1%D5%A6%D5%A1%D5%BF%D5%A1%D5%A3%D6%80%D5%B8%D6%82%D5%A9%D5%A5%D5%A1%D5%B6%20%D5%80%D5%A1%D5%B5%20%D4%B3%D5%A1%D5%B2%D5%BF%D5%B6%D5%AB%20%D4%B2%D5%A1%D5%B6%D5%A1%D5%AF_files/7661b327861117d79c2513087671_1176293239082179_63659731809203.jpg" alt="ASALA պատմական լուսանկար">
+                <img src="ASALA%20-%20%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%D5%AB%20%D4%B1%D5%A6%D5%A1%D5%BF%D5%A1%D5%A3%D6%80%D5%B8%D6%82%D5%A9%D5%A5%D5%A1%D5%B6%20%D5%80%D5%A1%D5%B5%20%D4%B3%D5%A1%D5%B2%D5%BF%D5%B6%D5%AB%20%D4%B2%D5%A1%D5%B6%D5%A1%D5%AF_files/images.jpg" alt="Հայոց ցեղասպանության հուշարձան">
+                <img src="ASALA%20-%20%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%D5%AB%20%D4%B1%D5%A6%D5%A1%D5%BF%D5%A1%D5%A3%D6%80%D5%B8%D6%82%D5%A9%D5%A5%D5%A1%D5%B6%20%D5%80%D5%A1%D5%B5%20%D4%B3%D5%A1%D5%B2%D5%BF%D5%B6%D5%AB%20%D4%B2%D5%A1%D5%B6%D5%A1%D5%AF_files/maxresdefault.jpg" alt="Հայաստանի դրոշ">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Կապ</h2>
+            <p>Եթե ունեք հարցեր կամ ցանկանում եք ավելին իմանալ ASALA-ի մասին, դիմեք մեզ։</p>
+            <form id="contactForm">
+                <label for="name">Անուն:</label>
+                <input type="text" id="name" name="name" required="">
+                
+                <label for="email">Էլ. փոստ:</label>
+                <input type="email" id="email" name="email" required="">
+                
+                <label for="message">Հաղորդագրություն:</label>
+                <textarea id="message" name="message" required="">lk </textarea>
+                
+                <button type="submit">Ուղարկել</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Շնորհակալություն ձեր հաղորդագրության համար։ Մենք կապ կհաստատենք ձեզ հետ։');
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+
+</body></html>
