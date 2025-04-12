@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Առաջադրանքներ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .task {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        #output1, #output2, #output3 {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Առաջադրանքներ</h1>
+    
+    <div class="task">
+        <h2>Առաջադրանք 1: Զույգ և կենտ թվեր 1-100 միջակայքում</h2>
+        <p>Ցիկլի միջոցով գտնել 1-ից 100 թվերի միջակայքում զույգ և կենտ թվերը:</p>
+        <button onclick="findEvenOdd()">Ցույց տալ արդյունքները</button>
+        <div id="output1"></div>
+    </div>
+    
+    <div class="task">
+        <h2>Առաջադրանք 2: Ֆիբոնաչիի հաջորդականություն</h2>
+        <p>Ցիկլի միջոցով ստանալ ֆիբոնաչիի թվերի հաջորդականությունը:</p>
+        <label for="fibCount">Մուտքագրեք թվերի քանակը.</label>
+        <input type="number" id="fibCount" value="20" min="1" max="100">
+        <button onclick="generateFibonacci()">Ստեղծել հաջորդականություն</button>
+        <div id="output2"></div>
+    </div>
+    
+    <div class="task">
+        <h2>Առաջադրանք 3: Ֆիբոնաչիի թվեր մինչև սահմանաչափ</h2>
+        <p>Ցիկլի միջոցով ստանալ ֆիբոնաչիի թվերը մինչև որոշակի արժեք:</p>
+        <label for="fibMax">Մուտքագրեք առավելագույն արժեք.</label>
+        <input type="number" id="fibMax" value="100" min="1">
+        <button onclick="generateFibonacciUpTo()">Ստեղծել հաջորդականություն</button>
+        <div id="output3"></div>
+    </div>
+
+    <script>
+        
+        
+        
+        function findEvenOdd() {
+            let evenNumbers = []; 
+            let oddNumbers = [];  
+
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 === 0) {
+                    evenNumbers.push(i);
+                } else {
+                    oddNumbers.push(i);
+                }
+            }
+
+            document.getElementById("output1").innerHTML = `
+                <strong>Զույգ թվեր (${evenNumbers.length} հատ):</strong><br>
+                ${evenNumbers.join(', ')}
+                <br><br>
+                <strong>Կենտ թվեր (${oddNumbers.length} հատ):</strong><br>
+                ${oddNumbers.join(', ')}
+            `;
+        }
+
+        function generateFibonacci() {
+            const n = parseInt(document.getElementById("fibCount").value);
+            let sequence = [0, 1]; 
+            
+            if (n === 1) {
+                sequence = [0];
+            } else if (n === 2) {
+                sequence = [0, 1];
+            } else {
+                for (let i = 2; i < n; i++) {
+                    sequence.push(sequence[i-1] + sequence[i-2]);
+                }
+            }
+            
+            document.getElementById("output2").innerHTML = `
+                <strong>Ֆիբոնաչիի առաջին ${n} թվերը:</strong><br>
+                ${sequence.join(', ')}
+            `;
+        }
+
+        function generateFibonacciUpTo() {
+            const max = parseInt(document.getElementById("fibMax").value);
+            let sequence = [0, 1];
+            
+            if (max < 0) {
+                sequence = [];
+            } else if (max === 0) {
+                sequence = [0];
+            } else {
+                let next = sequence[0] + sequence[1];
+                while (next <= max) {
+                    sequence.push(next);
+                    next = sequence[sequence.length-1] + sequence[sequence.length-2];
+                }
+            }
+            
+            document.getElementById("output3").innerHTML = `
+                <strong>Ֆիբոնաչիի թվեր մինչև ${max}:</strong><br>
+                ${sequence.join(', ')}<br>
+                <strong>Ընդհանուր ${sequence.length} թիվ</strong>
+            `;
+        }
+    </script>
+</body>
+</html>
